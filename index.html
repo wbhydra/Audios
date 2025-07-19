@@ -1,13 +1,1853 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Audio Collection</title>
-</head>
-<body>
-  <h1>Welcome to My Audio Page</h1>
-  <p>Example Audio:</p>
-  <audio controls src="./audios/01. Lyrical Uska Hi Banana  1920 Evil Returns  Arijit Singh  Aftab Shivdasani, Tia Bajpai.mp3"></audio>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="utility.css" /> -->
+    <title>Spotify - Web Player: Music for everyone</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="nav-left">
+        <div class="logo">
+          <div class="logo-1">
+            <img src="assets/svg/logo.svg" alt="spotify" />
+          </div>
+        </div>
+        <div class="home">
+          <div class="home-1">
+            <img src="assets/svg/hom-icon.svg" alt="Home" />
+          </div>
+        </div>
+        <div class="search-bar">
+          <div class="search-icon">
+            <div class="search-icon-1">
+              <img src="assets/svg/search.svg" alt="Search" />
+            </div>
+          </div>
+          <div class="search">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="What do you want to play?"
+            />
+          </div>
+          <div class="sep-search">
+            <div id="sep-search"></div>
+          </div>
+          <div class="browse">
+            <div class="browse-1">
+              <img src="assets/svg/browse.svg" alt="Browse" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <div class="buttons-left">
+          <div class="button">Premium</div>
+          <div class="button">Support</div>
+          <div class="button">Download</div>
+        </div>
+        <div class="sep-right">
+          <div id="sep-right"></div>
+        </div>
+        <div class="buttons-right">
+          <div class="button">
+            <div class="install-icon">
+              <img src="assets/svg/install-icon.svg" alt="Install" />
+            </div>
+            <div class="install">Install App</div>
+          </div>
+          <div class="button sign-up">Sign up</div>
+        </div>
+        <div class="btn-login">
+          <div class="button-login">Log in</div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="sidebar">
+        <div class="sidebar-1">
+          
+          <div class="library">
+            <div class="lib-text">Your Library</div>
+            <div class="lib-icon">
+              <img src="assets/svg/lib-icon.svg" alt="plus" />
+            </div>
+          </div><div class="sidebar-1-wrapper">
+          <div class="side-top">
+            <div class="top-text1">Create your first playlist</div>
+            <div class="top-text2">It's easy,we'll help you</div>
+            <div class="top-btn">
+              <button id="top-btn">Create playlist</button>
+            </div>
+          </div>
+          <div class="side-btm">
+            <div class="btm-text1">Let's find some podcasts to follow</div>
+            <div class="btm-text2">We'll keep you updated on new episodes</div>
+            <div class="btm-btn">
+              <button id="btm-btn">Browse podcasts</button>
+            </div>
+          </div></div>
+        </div>
+        <div class="sidebar-2">
+          <div class="favourites">
+            <h4>Favourites</h4>
+            <ol>
+              <!-- <li class="song-1">Song-1</li>
+              <li class="song-2">Song-2</li>
+              <li class="song-3">Song-3</li>
+              <li class="song-4">Song-4</li>
+              <li class="song-5">Song-5</li>
+              <li class="song-6">Song-6</li>
+              <li class="song-7">Song-7</li>
+              <li class="song-8">Song-8</li>
+              <li class="song-9">Song-9</li>
+              <li class="song-10">Song-10</li> -->
+            </ol>
+          </div>
+          <div class="footer">
+            <div class="legal">
+              <a href="www.google.com">Legal</a>
+            </div>
+            <div class="safety">
+              <a href="www.google.com">Safety & Privacy Center</a>
+            </div>
+            <div class="privacy">
+              <a href="www.google.com">Privacy Policy</a>
+            </div>
+            <div class="cookies">
+              <a href="www.google.com">Cookies</a>
+            </div>
+            <div class="about">
+              <a href="www.google.com">About Ads</a>
+            </div>
+            <div class="accessibility">
+              <a href="www.google.com">Accessibility</a>
+            </div>
+            <div class="lang-btn">
+              <div class="lang-icon">
+                <img src="assets/svg/lang-icon.svg" alt="language" />
+              </div>
+              <div class="lang-text">English</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div class="container">
+          <div class="section-1">
+            <div class="sec-empty"></div>
+            <div class="sec-el">
+              <div class="sec-head">
+                <div class="sec-title">
+                  <h1>Trending songs</h1>
+                </div>
+                <div class="btn-all">
+                  <button id="btn-all">Show all</button>
+                </div>
+              </div>
+              <div class="overflow-wrapper">
+                <div class="sec-contents">
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-2">
+            <div class="sec-empty"></div>
+            <div class="sec-el">
+              <div class="sec-head">
+                <div class="sec-title">
+                  <h1>Trending songs</h1>
+                </div>
+                <div class="btn-all">
+                  <button id="btn-all">Show all</button>
+                </div>
+              </div>
+              <div class="overflow-wrapper">
+                <div class="sec-contents">
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-3">
+            <div class="sec-empty"></div>
+            <div class="sec-el">
+              <div class="sec-head">
+                <div class="sec-title">
+                  <h1>Trending songs</h1>
+                </div>
+                <div class="btn-all">
+                  <button id="btn-all">Show all</button>
+                </div>
+              </div>
+              <div class="overflow-wrapper">
+                <div class="sec-contents">
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-4">
+            <div class="sec-empty"></div>
+            <div class="sec-el">
+              <div class="sec-head">
+                <div class="sec-title">
+                  <h1>Trending songs</h1>
+                </div>
+                <div class="btn-all">
+                  <button id="btn-all">Show all</button>
+                </div>
+              </div>
+              <div class="overflow-wrapper">
+                <div class="sec-contents">
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-5">
+            <div class="sec-empty"></div>
+            <div class="sec-el">
+              <div class="sec-head">
+                <div class="sec-title">
+                  <h1>Trending songs</h1>
+                </div>
+                <div class="btn-all">
+                  <button id="btn-all">Show all</button>
+                </div>
+              </div>
+              <div class="overflow-wrapper">
+                <div class="sec-contents">
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="thumbnail">
+                      <img src="assets/images/Banjaara 500x500.jpg" alt="" />
+                      <div class="play-btn">
+                        <img
+                          src="assets/svg/play-circle-svgrepo-com.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-text">
+                      <div class="title"><h4>Banjaara</h4></div>
+                      <div class="sub-title"><h5>Ek Villain</h5></div>
+                      <div class="singer"><h5>Irfan</h5></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="playing-zone">
+          <div class="song-info">song name</div>
+          <div class="player">
+            <div class="previous-btn">
+              <i class="fa-duotone fa-solid fa-backward"></i>
+            </div>
+            <div class="play"><i class="fa-solid fa-play"></i></div>
+            <div class="next-btn">
+              <i class="fa-solid fa-forward"></i>
+            </div>
+          </div>
+          <div class="duration">duration</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
